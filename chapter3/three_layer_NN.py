@@ -4,16 +4,13 @@ import numpy as np
 def identity_function(x):
     return x
 
-def init_network():
-    network = {}
-    network['W1'] = np.array([[0.1, 0.3, 0.5], [0.2, 0.4, 0.6]])
-    network['b1'] = np.array([0.1, 0.2, 0.3])
-    network['W2'] = np.array([[0.1, 0.4], [0.2, 0.5], [0.3, 0.6]])
-    network['b2'] = np.array([0.1, 0.2])
-    network['W3'] = np.array([[0.1, 0.3], [0.2, 0.4]])
-    network['b3'] = np.array([0.1, 0.2])
 
-    return network
+def init_network():
+    net_work = {'W1': np.array([[0.1, 0.3, 0.5], [0.2, 0.4, 0.6]]), 'b1': np.array([0.1, 0.2, 0.3]),
+               'W2': np.array([[0.1, 0.4], [0.2, 0.5], [0.3, 0.6]]), 'b2': np.array([0.1, 0.2]),
+               'W3': np.array([[0.1, 0.3], [0.2, 0.4]]), 'b3': np.array([0.1, 0.2])}
+
+    return net_work
 
 
 def sigmoid_function(x):
@@ -33,7 +30,8 @@ def forward(network, x):
 
     return y
 
-network  = init_network()
+
+network = init_network()
 x = np.array([1.0, 0.5])
 y = forward(network, x)
 print(y)
