@@ -18,7 +18,6 @@ img = x_train[0]
 label = t_train[0]
 
 print(label)
-
 print(img.shape)
 img = img.reshape(28, 28)
 print(img.shape)
