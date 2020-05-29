@@ -13,7 +13,7 @@ class TwoLayerNet:
 
     def __init__(self, input_size, hidden_size, output_size, weight_init_std=0.01):
         self.params = {}
-        self.paramsp['W1'] = weight_init_std * np.random.rand(input_size, hidden_size)
+        self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
         self.params['b1'] = np.zeros(hidden_size)
         self.params['W2'] = weight_init_std * np.random.randn(hidden_size, output_size)
         self.params['b2'] = np.zeros(output_size)
@@ -35,8 +35,8 @@ class TwoLayerNet:
 
     def accuracy(self, x, t):
         y = self.predict(x)
-        y_max = np.argmax(y, axis=1)
-        t_max = np.argmax(t, axis=1)
+        y = np.argmax(y, axis=1)
+        t = np.argmax(t, axis=1)
 
         accuracy = np.sum(y == t) / float(x.shape[0])
         return accuracy
@@ -67,11 +67,11 @@ class TwoLayerNet:
 
         # backward
         dy = (y - t) / batch_num
-        grads['W2'] = np.dot(z1, dy)
+        grads['W2'] = np.dot(z1.T, dy)
         grads['b2'] = np.sum(dy, axis=0)
 
-        dz1 = np.dot(z1.T, dy)
-        da1 = sigmoid(a2)
+        dz1 = np.dot(dy, W2.T)
+        da1 = sigmoid_grad(a1) * dz1
         grads['W1'] = np.dot(x.T, da1)
         grads['b1'] = np.sum(da1, axis=0)
 
