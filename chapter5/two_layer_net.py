@@ -15,7 +15,7 @@ class TwoLayerNet:
         self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
         self.params['b1'] = np.zeros(hidden_size)
         self.params['W2'] = weight_init_std * np.random.randn(hidden_size, output_size)
-        self.params['b1'] = np.zeros(output_size)
+        self.params['b2'] = np.zeros(output_size)
 
         # create layers
         self.layers = OrderedDict()
@@ -49,9 +49,9 @@ class TwoLayerNet:
         loss_W = lambda W: self.loss(x, t)
 
         grads = {}
-        grads['W1'] = numerical_gradient(loss_W, self.prams['W1'])
+        grads['W1'] = numerical_gradient(loss_W, self.params['W1'])
         grads['b1'] = numerical_gradient(loss_W, self.params['b1'])
-        grads['W2'] = numerical_gradient(loss_W, self.prams['W2'])
+        grads['W2'] = numerical_gradient(loss_W, self.params['W2'])
         grads['b2'] = numerical_gradient(loss_W, self.params['b2'])
 
         return grads
