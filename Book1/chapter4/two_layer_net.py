@@ -1,8 +1,8 @@
 import os
 import sys
 
-from common.functions import *
-from common.gradient import numerical_gradient
+from Book1.common.functions import *
+from Book1.common.gradient import numerical_gradient
 
 import numpy as np
 

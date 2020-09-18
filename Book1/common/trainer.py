@@ -1,8 +1,7 @@
 # coding: utf-8
 import sys, os
 sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
-import numpy as np
-from common.optimizer import *
+from Book1.common.optimizer import *
 
 class Trainer:
     """ニューラルネットの訓練を行うクラス

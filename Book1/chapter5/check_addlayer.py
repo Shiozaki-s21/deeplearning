@@ -1,5 +1,5 @@
-from chapter5.mul_layer import MulLayer
-from chapter5.add_layer import AddLayer
+from Book1.chapter5.mul_layer import MulLayer
+from Book1.chapter5.add_layer import AddLayer
 from decimal import Decimal
 
 # for decimal

@@ -1,4 +1,4 @@
-from chapter5.mul_layer import MulLayer
+from Book1.chapter5.mul_layer import MulLayer
 from decimal import Decimal
 
 # for decimal

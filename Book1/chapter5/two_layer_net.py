@@ -2,8 +2,8 @@ import os
 import sys
 
 sys.path.append(os.pardir)
-from common.layers import *
-from common.gradient import numerical_gradient
+from Book1.common.layers import *
+from Book1.common.gradient import numerical_gradient
 from collections import OrderedDict
 
 

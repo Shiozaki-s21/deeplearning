@@ -1,5 +1,4 @@
 import numpy as np
-import math
 
 
 def cross_entropy_error(y_arr, t_arr):
@@ -7,7 +6,10 @@ def cross_entropy_error(y_arr, t_arr):
     return - np.sum(t_arr * np.log(y_arr + delta))
 
 
-t = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-y = [0.1, 0.05, 0.6, 0.0, 0.05, 0.1, 0.0, 0.1, 0.0, 0.0]
+# t = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+# y = [0.1, 0.05, 0.6, 0.0, 0.05, 0.1, 0.0, 0.1, 0.0, 0.0]
+
+t = [1, 0]
+y = [0.0078, 1.0 - 0.0078]
 
 print(cross_entropy_error(np.array(y), np.array(t)))

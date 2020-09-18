@@ -1,14 +1,14 @@
-import sys, os
+import sys
+import os
+
 sys.path.append(os.pardir)
 
 import numpy as np
-import matplotlib.pyplot as plt
-from dataset.mnist import load_mnist
-from chapter4.two_layer_net import TwoLayerNet
+from Book1.dataset.mnist import load_mnist
+from Book1.chapter5.two_layer_net import TwoLayerNet
 
-# get data
+
 (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
-
 network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
 
 iters_num = 10000
@@ -40,15 +40,4 @@ for i in range(iters_num):
         test_acc = network.accuracy(x_test, t_test)
         train_acc_list.append(train_acc)
         test_acc_list.append(test_acc)
-        print("train acc, test acc | " + str(train_acc) + "," + str(test_acc))
-
-# plotting
-markers = {'train': 'o', 'test': 's'}
-x = np.arange(len(train_acc_list))
-plt.plot(x, train_acc_list, label='train acc')
-plt.plot(x, test_acc_list, label='test acc', linestyle='--')
-plt.xlabel("epochs")
-plt.ylabel("accuracy")
-plt.ylim(0, 1.0)
-plt.legend(loc='lower right')
-plt.show()
+        print('train accuracy: ' + str(train_acc) + ' test accuracy: ' + str(test_acc))

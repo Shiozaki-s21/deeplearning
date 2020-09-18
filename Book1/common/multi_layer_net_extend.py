@@ -1,10 +1,9 @@
 # coding: utf-8
 import sys, os
 sys.path.append(os.pardir) # 親ディレクトリのファイルをインポートするための設定
-import numpy as np
 from collections import OrderedDict
-from common.layers import *
-from common.gradient import numerical_gradient
+from Book1.common.layers import *
+from Book1.common.gradient import numerical_gradient
 
 class MultiLayerNetExtend:
     """拡張版の全結合による多層ニューラルネットワーク

@@ -1,5 +1,5 @@
-from chapter4.cross_entropy_error import cross_entropy_error
-from chapter3.softmax_function import softmax_function
+from Book1.chapter4.cross_entropy_error import cross_entropy_error
+from Book1.chapter3.softmax_function import softmax_function
 
 
 class SoftMaxWithLoss:
