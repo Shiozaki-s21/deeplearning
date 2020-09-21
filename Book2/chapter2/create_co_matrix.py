@@ -3,7 +3,7 @@ import numpy as np
 
 def create_to_matrix(corpus, vocab_size, window_size=1):
     corpus_size = len(corpus)
-    co_matrix = np.zeros((vocab_size, vocab_size), dtype=np.int)
+    co_matrix = np.zeros((vocab_size, vocab_size), dtype=np.int32)
 
     for idx, word_id in enumerate(corpus):
         for i in range(1, window_size + 1):
