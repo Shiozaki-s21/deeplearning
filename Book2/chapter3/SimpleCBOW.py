@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append('..')
 import numpy as np
 from Book2.common.layers import MatMul, SoftmaxWithLoss

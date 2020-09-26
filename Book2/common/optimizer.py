@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
 sys.path.append('..')
-from common.np import *
+from Book2.common.np import *
 
 
 class SGD:
