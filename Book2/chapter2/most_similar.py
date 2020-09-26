@@ -1,5 +1,5 @@
 import numpy as np
-from Book2.common.util import preprocess, cos_similarity, create_to_matrix
+from Book2.common.util import preprocess, cos_similarity, create_co_matrix
 
 def most_similar(query, word_to_id, id_to_word, word_matrix, top=5):
     # get query

@@ -10,7 +10,7 @@ def ppmi(C, verbose=False, eps=1e-8):
 
     for i in range(C.shape[0]):
         for j in range(C.shape[1]):
-            pmi = np.log2(C[i, j] * N / (S[j] * S[j]) + eps)
+            pmi = np.log2(C[i, j] * N / (S[j] * S[i]) + eps)
             M[i, j] = max(0, pmi)
 
             if verbose:
