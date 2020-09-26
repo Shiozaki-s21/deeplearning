@@ -5,7 +5,9 @@ import numpy as np
 from Book2.common.layers import MatMul
 
 # Sample context data
+# id for you
 c0 = ([1, 0, 0, 0, 0, 0, 0])
+# id for goodbye
 c1 = ([0, 0, 1, 0, 0, 0, 0])
 
 # init weight
